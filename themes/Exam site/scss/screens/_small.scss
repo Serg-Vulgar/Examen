@@ -1,0 +1,13 @@
+@include breakpoint ($small) {
+
+
+
+	.sidebar {
+		display: table-cell;
+	}
+
+	.pre-footer {
+		display: block;
+	}
+}
+

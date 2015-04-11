@@ -1,0 +1,440 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'code-light';
+  src: url(../fonts/CODE_Light.eot);
+  src: url(../fonts/CODE_Light.ttf);
+  src: url(../fonts/CODE_Light.woff);
+  src: url(../fonts/code_light-webfont.woff2);
+}
+@font-face {
+  font-family: centery-gothic;
+  src: url(../fonts/Century_Gothic.ttf);
+}
+@font-face {
+  font-family: 'icon-font';
+  src: url("../fonts/icon-font.eot?17216612");
+  src: url("../fonts/icon-font.eot?17216612#iefix") format("embedded-opentype"), url("../fonts/icon-font.woff?17216612") format("woff"), url("../fonst/icon-font.ttf?17216612") format("truetype"), url("../fonts/icon-font.svg?17216612#icon-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icon-font';
+    src: url('../font/icon-font.svg?17216612#icon-font') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icon-font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-right-open:before {
+  content: '\e800';
+}
+
+/* 'юаА' */
+.icon-tumbler:before {
+  content: '\e801';
+}
+
+/* 'юаБ' */
+.icon-twitter:before {
+  content: '\e802';
+}
+
+/* 'юаВ' */
+.icon-facebook:before {
+  content: '\e803';
+}
+
+/* 'юаГ' */
+.icon-gplus:before {
+  content: '\e804';
+}
+
+/* 'юаД' */
+.icon-blogger:before {
+  content: '\e805';
+}
+
+/* 'юаЕ' */
+/*----------Default styles----------*/
+html {
+  font-size: 1rem;
+  font-family: "CODE Light", Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*----------Grid----------*/
+.container {
+  max-width: 1663px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/*----------Header----------*/
+.header {
+  background-color: #F6F6F6;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.logo {
+  float: left;
+  width: 116px;
+  height: 116px;
+  margin: 22px 0;
+}
+
+.nav {
+  text-align: right;
+  margin-top: 70px;
+}
+.nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.nav a {
+  color: #000;
+  padding: 20px 10px;
+  text-transform: uppercase;
+}
+.nav a:hover, .nav a.active {
+  background-color: #ffea00;
+}
+
+.top-heade, .bottom-header {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.top-header {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 0 100px;
+}
+
+.bottom-header {
+  background-image: url("../images/slider_bg.png");
+  height: 150px;
+  padding: 0 100px;
+}
+.bottom-header h2 {
+  background-color: #000;
+  display: inline-block;
+  color: #ffea00;
+  margin-top: 50px;
+  margin-left: 20px;
+  padding: 10px 160px 10px 10px;
+  font-size: 2.18rem;
+  text-transform: uppercase;
+}
+
+/*----------Main----------*/
+.wrapper {
+  display: table;
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main {
+  display: table-cell;
+  width: 70.7155%;
+  padding-right: 30px;
+}
+
+.citate {
+  width: 48.71795%;
+  background-color: #ffea00;
+  color: #000;
+  padding: 5px 5px 5px 20px;
+}
+
+.posts {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.posts .thumbhail img {
+  max-width: 100%;
+}
+.posts .post {
+  width: 48.71795%;
+  float: left;
+  overflow: hidden;
+  display: inline-block;
+  background-color: #ffea00;
+  margin: 20px 0;
+}
+.posts .post:nth-child(2n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+.posts .post:nth-child(2n + 2) {
+  margin-left: 51.28205%;
+  margin-right: -100%;
+  clear: none;
+}
+.posts .entry {
+  font-size: .875rem;
+  padding: 20px;
+}
+.posts .entry a {
+  color: #000;
+}
+.posts .entry h3 {
+  padding: 10px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.posts .entry .metadata {
+  text-align: right;
+}
+
+.sidebar {
+  color: #fff;
+  display: none;
+}
+
+.sidebar-list .list-item {
+  padding: 10px 10px 20px 10px;
+  background-color: #414145;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.sidebar-list h3 {
+  color: #ffea00;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.sidebar-list .item {
+  width: 48.71795%;
+  float: left;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 10px;
+}
+.sidebar-list .item:nth-child(2n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+.sidebar-list .item:nth-child(2n + 2) {
+  margin-left: 51.28205%;
+  margin-right: -100%;
+  clear: none;
+}
+.sidebar-list .item a {
+  display: inline-block;
+  color: #fff;
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+.sidebar-list .item .icon {
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  background: url(../images/ic-bg.png);
+}
+.sidebar-list .item .title {
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+}
+
+/*----------Footer----------*/
+.pre-footer {
+  display: none;
+  background-color: #414145;
+  padding: 0 100px;
+  color: #fff;
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.pre-footer li {
+  width: 23.07692%;
+}
+.pre-footer h3 {
+  font-size: 1.1rem;
+  padding: 2rem 1.75rem;
+}
+.pre-footer p {
+  padding-bottom: 2rem;
+}
+.pre-footer .button {
+  display: inline-block;
+  background-color: #000;
+  padding: 15px 20px;
+  font-size: .9rem;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+.pre-footer .button:hover {
+  border-bottom-color: #ffea00;
+}
+.pre-footer .about-us .photos a {
+  display: inline-block;
+  width: 31.62393%;
+  float: left;
+  width: 130px;
+  height: 70px;
+}
+.pre-footer .about-us .photos a:nth-child(3n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+.pre-footer .about-us .photos a:nth-child(3n + 2) {
+  margin-left: 34.18803%;
+  margin-right: -100%;
+  clear: none;
+}
+.pre-footer .about-us .photos a:nth-child(3n + 3) {
+  margin-left: 68.37607%;
+  margin-right: -100%;
+  clear: none;
+}
+.pre-footer .about-us .photos img {
+  max-width: 100%;
+}
+
+.footer {
+  color: #fff;
+  background-color: #000;
+  padding: 20px 100px;
+}
+.footer .copyright {
+  float: left;
+}
+.footer .footer-nav {
+  text-align: right;
+}
+.footer .footer-nav li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.footer .footer-nav a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.footer .footer-nav a:hover {
+  color: #ffea00;
+}
+
+@media (min-width: 750px) {
+  .sidebar {
+    display: table-cell;
+  }
+
+  .pre-footer {
+    display: block;
+  }
+}

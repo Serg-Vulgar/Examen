@@ -1,0 +1,249 @@
+@import "grids";
+@import "typography";
+
+
+/*----------Default styles----------*/
+
+html {
+	font-size: 1rem;
+	font-family: $main-font;
+}
+
+a {
+	text-decoration: none;
+}
+/*----------Grid----------*/
+
+
+.container {
+	@include container;
+}
+
+
+/*----------Header----------*/
+.header {
+	background-color: $fifth-color;
+	padding-bottom: 30px;
+	overflow: hidden;
+}
+
+.logo {
+	float: left;
+	width: 116px;
+	height: 116px;
+	margin: 22px 0;
+}
+
+.nav {
+	text-align: right;
+	margin-top: 70px;
+	li {
+		display: inline-block;
+		margin-left: 20px;
+	}
+	a {
+		color: $fourth-color;
+		padding:  20px 10px;
+		text-transform: uppercase;
+		&:hover, &.active {
+			background-color: $third-color;
+		}
+	}
+}
+
+.top-heade, .bottom-header {
+	@include full;
+}
+
+.top-header {
+	@include clearfix;
+	padding: 0 100px;
+}
+.bottom-header {
+	background-image: url("../images/slider_bg.png");
+	height: 150px;
+	padding: 0 100px;
+	h2 {
+		background-color: $fourth-color;
+		display: inline-block;
+		color: $third-color;
+		margin-top: 50px;
+		margin-left: 20px;
+		padding: 10px 160px 10px 10px;
+		font-size: 2.18rem;
+		text-transform: uppercase;
+	}
+}
+/*----------Main----------*/
+.wrapper {
+	display: table;
+	@include full;
+}
+
+.main {
+	display: table-cell;
+	width: 70.7155%;
+	padding-right: 30px;
+}
+
+	.citate {
+		width: span(6);
+		background-color: $third-color;
+		color: $fourth-color;
+		padding: 5px 5px 5px 20px;
+	}
+.posts {
+	margin-top: 20px;
+	overflow: hidden;
+	.thumbhail {
+		img {
+			max-width: 100%;
+		}
+		
+	}
+	.post {
+		@include gallery(6);
+		overflow: hidden;
+		display: inline-block;
+		background-color: $third-color;
+		margin: 20px 0;
+	}
+	.entry {
+		a {
+			color: $fourth-color;
+		}
+		font-size: .875rem;
+		padding: 20px;
+		h3 {
+			padding: 10px 0;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	.metadata {
+		text-align: right;;
+	}
+	}
+}
+
+.sidebar {
+	color: $main-color;
+	display: none;
+}
+
+.sidebar-list {
+
+	.list-item {
+		padding: 10px 10px 20px 10px;
+		background-color: $sixth-color;
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
+
+	h3 {
+		color: $third-color;
+		font-size: 1.25rem;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	.item {
+		@include gallery(6);
+		overflow: hidden;
+		display: block;
+		margin-bottom: 10px;
+		a {
+			display: inline-block;
+			color: $main-color;
+			font-size: .75rem;
+			text-transform: uppercase;
+		}
+		.icon {
+			display: inline-block;
+			width: 31px;
+			height: 31px;
+			background: url(../images/ic-bg.png);
+		}
+		.title {
+			display: inline-block;
+			position: relative;
+			bottom: 10px;
+			left: 10px;
+		}
+	}
+}
+
+
+
+/*----------Footer----------*/
+.pre-footer {
+	display: none;
+	background-color: $sixth-color;
+	padding: 0 100px;
+	color: $main-color;
+	@include full;
+	li {
+		width: span(3);
+	}
+	h3 {
+
+		font-size: 1.1rem;
+		padding: 2rem 1.75rem;
+	}
+	p {
+		padding-bottom: 2rem;
+	}
+	.button {
+		display: inline-block;
+		background-color: $fourth-color;
+		padding: 15px 20px;
+		font-size: .9rem;
+		color: $main-color;
+		border-bottom: 1px solid transparent;
+		&:hover {
+			border-bottom-color: $third-color;
+		}
+	}
+	.about-us {
+		.photos {
+			a {
+				display: inline-block;
+				@include gallery(4);
+				width: 130px;
+				height: 70px;
+			}
+			img {
+				max-width: 100%;
+				
+			}
+		}
+	}
+
+}
+
+.footer {
+	color: $main-color;
+	background-color: $fourth-color;
+	padding: 20px 100px;
+
+	.copyright {
+		float: left;
+	}
+
+	.footer-nav{
+		text-align: right;
+			li {
+				display: inline-block;
+				margin-left: 10px;
+			}
+			a {
+				color: $main-color;
+				text-transform: uppercase;
+				&:hover {
+					color: $third-color;
+				}
+			}
+	}
+
+}
+
+@import "screens/_small";
